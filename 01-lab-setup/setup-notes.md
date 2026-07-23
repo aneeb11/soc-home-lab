@@ -20,7 +20,7 @@ I was confused about this at first. The manager is the central place logs get co
 
 # Why Windows has an agent but Metasploitable2 doesn't
 
-This is on purpose. Windows is my "monitored" victim, same as a real employee's laptop would have monitoring software on it. Metasploitable2 is my "unmonitored" victim, which is also realistic — plenty of real breaches happen on machines nobody thought to watch.
+This is on purpose. Windows is my "monitored" victim, same as a real employee's laptop would have monitoring software on it. Metasploitable2 is my "unmonitored" victim, which is also realistic, plenty of real breaches happen on machines nobody thought to watch.
 
 If a machine doesn't have Sysmon or the Wazuh agent installed, I get zero visibility into it. No agent means no logs means no detection, no matter how obvious an attack against it is.
 
