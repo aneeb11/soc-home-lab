@@ -32,7 +32,7 @@ Attacker generated an auth token for the new account and used it (Bearer token i
 **5. Recon**
 Queried `/app/rest/debug/jvm/systemProperties`, pulled back server environment details (OS, Java version, file paths, running as `root`).
 
-**6. Persistence — webshell upload**
+**6. Persistence webshell upload**
 Uploaded a malicious plugin (`NSt8bHTg.zip`) via `/admin/pluginUpload.html`, containing a JSP webshell (`NSt8bHTg.jsp`). The webshell accepts a `cmd` parameter and executes it via `ProcessBuilder`, giving the attacker arbitrary command execution.
 
 **7. Privilege escalation / container escape attempts**
@@ -61,10 +61,10 @@ New credentials written: username `a1l4m`, password `youarecompromised`.
 
 ## MITRE ATT&CK mapping
 
-- **Initial Access — T1190:** Exploit Public-Facing Application (CVE-2024-27198 auth bypass)
-- **Persistence — T1505.003:** Server Software Component: Web Shell
-- **Privilege Escalation — T1611:** Escape to Host (container escape attempts)
-- **Impact — T1565.001:** Stored Data Manipulation (credentials file tampering)
+- **Initial Access T1190:** Exploit Public-Facing Application (CVE-2024-27198 auth bypass)
+- **Persistence T1505.003:** Server Software Component: Web Shell
+- **Privilege Escalation T1611:** Escape to Host (container escape attempts)
+- **Impact T1565.001:** Stored Data Manipulation (credentials file tampering)
 
 ## What this investigation covers vs. doesn't
 
